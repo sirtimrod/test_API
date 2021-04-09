@@ -13,8 +13,13 @@ sudo apt install postgresql
 sudo service postgresql enable
 
 # set default password for default database user 
-sudo -u postgres -c "alter user postgres with password 'postgres';"
-sudo -u postgres -c "create database store;"
+sudo -u postgres psql -c "alter user postgres with password 'postgres';"
+sudo -u postgres psql -c "create database store;"
+suso -u postgres psql
+# enter sudo password
+\c store
+create table resources(id serial primary key, title char(8) not null, amount real, measurement char(8) not null, price real, create_at date);
+
 
 # run database
 sudo service postgresql start
