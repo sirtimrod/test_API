@@ -42,10 +42,16 @@ python run_server.py
 
 ### Request examples with curl
 ```bash
-# GET request
+# GET request resources
 curl -i http://127.0.0.1:5000/resources
 
 # POST request
 curl -i -H "Content-Type: application/json" -X POST -d '{"title":"res_1", "amount":32, "measurement":"liter", "price":10, "create_at":"2020-02-12"}' http://127.0.0.1:5000/resources
+# UPDATE request
+curl -i -H "Content-Type: application/json" -X PUT -d '{"title":"res_2", "amount":157, "measurement":"kg", "price":4, "create_at":"2030-12-11"}' http://127.0.0.1:5000/resources/1
+# DELETE request
+curl -X DELETE http://127.0.0.1:5000/resources/1
 
+# GET request total_cost
+curl -i http://127.0.0.1:5000/total_cost
 ```
