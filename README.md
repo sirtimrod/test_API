@@ -20,7 +20,6 @@ suso -u postgres psql
 \c store
 create table resources(id serial primary key, title char(8) not null, amount real, measurement char(8) not null, price real, create_at date);
 
-
 # run database
 sudo service postgresql start
 
