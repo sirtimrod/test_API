@@ -20,7 +20,7 @@ sudo -u postgres -c "create database store;"
 sudo service postgresql start
 
 mkdir ~/API_project && cd ~/API_project
-git clone https://github.com/memefeed/backend.git 
+git clone https://github.com/sirtimrod/test_API.git
 python3 -m venv test_project
 cd test_project
 source bin/activate
