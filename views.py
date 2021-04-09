@@ -35,7 +35,7 @@ def add_resource():
 		'amount': new_resource.amount,
 		'': new_resource.measurement,
 		'price': new_resource.price,
-		'date': request.json['create_at']
+		'date': f'{new_resource.create_at.day}-{new_resource.create_at.month}-{new_resource.create_at.year}'
 	}
 
 	return jsonify(data), 201 # jsonify turns data to json 
@@ -56,7 +56,7 @@ def update_resource(resources_id):
 		'id': item.id,
 		'amount': item.amount,
 		'price': item.price,
-		'date': request.json['create_at']
+		'date': f'{item.create_at.day}-{item.create_at.month}-{item.create_at.year}'
 	}
 
 	return data, 201
