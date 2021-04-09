@@ -34,7 +34,4 @@ sudo service postgresql start
 cd ~/API_project/test_project
 source bin/activate
 python run_server.py
-
-# or run admin-panel
-./run_admin.py
 ```
