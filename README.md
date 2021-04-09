@@ -39,3 +39,13 @@ cd ~/API_project/test_project
 source bin/activate
 python run_server.py
 ```
+
+### Request examples with curl
+```bash
+# GET request
+curl -i http://127.0.0.1:5000/resources
+
+# POST request
+curl -i -H "Content-Type: application/json" -X POST -d '{"title":"res_1", "amount":32, "measurement":"liter", "price":10, "create_at":"2020-02-12"}' http://127.0.0.1:5000/resources
+
+```
