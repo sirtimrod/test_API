@@ -12,7 +12,8 @@ app = Flask(__name__)
 app.config['JSON_SORT_KEYS'] = False
 
 # Creating a binding to a DB to work with a DB
-engine = create_engine('postgresql://postgres:postgres@localhost/store')
+# engine = create_engine('postgresql://postgres:postgres@localhost/store')
+engine = create_engine('postgres://knsdsutdhbngfy:7fef2ba41102b267640cd8f043a8a38a7fbfbc2fa647c4792e457750820c34d1@ec2-54-228-9-90.eu-west-1.compute.amazonaws.com:5432/dbd84nse1qndtl')
 
 # Session object
 session = scoped_session(sessionmaker(autocommit=False, autoflush=False, bind=engine))
