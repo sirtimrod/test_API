@@ -2,9 +2,6 @@
 /include
 /lib
 /lib64
-Pipfile
-Pipfile.lock
-pyvenv.cfg
 /.idea
 /share
 /__pycache__
